@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 h1{
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 
 p {
   font-family: "Manrope", sans-serif;
@@ -26,6 +32,9 @@ p {
 .text-color{
     color: #A5A5AB;
     font-weight: 500;
+}
+.text-color-light{
+  color: #A5A5AB;
 }
 
 .text-white{
