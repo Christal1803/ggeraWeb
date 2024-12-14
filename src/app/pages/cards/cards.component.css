@@ -1,0 +1,28 @@
+.cardimg{
+        height: 200px;
+        background-repeat: no-repeat;
+  
+}
+.card1{
+        background-image: url('/assets/svg/card1.svg');
+
+}
+.card2{
+        background-image: url('/assets/svg/card2.svg');
+
+}
+.card3{
+        background-image: url('/assets/svg/card3.svg');
+
+}
+.card4{
+        background-image: url('/assets/svg/card4.svg');
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+        font-family: "Righteous", sans-serif;
+      }
+      .p{
+        font-family: "Manrope", sans-serif;
+      }
