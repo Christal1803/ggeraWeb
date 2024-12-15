@@ -7,7 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class SessionComponent implements OnInit {
  customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     autoplay: true,
     mouseDrag: true,
     touchDrag: true,
