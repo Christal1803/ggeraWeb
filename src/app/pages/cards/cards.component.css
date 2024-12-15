@@ -2,6 +2,7 @@
         height: 200px;
         background-repeat: no-repeat;
   width: 100%;
+  border-radius: 20px;
 }
 .card1{
         background-image: url('/assets/svg/card1.svg');
@@ -19,10 +20,10 @@
         background-image: url('/assets/svg/card4.svg');
 
 }
+.mt-100{
+        margin-top: 100px;
+}
 
-h1, h2, h3, h4, h5, h6 {
-        font-family: "Righteous", sans-serif;
-      }
       .p{
         font-family: "Manrope", sans-serif;
       }

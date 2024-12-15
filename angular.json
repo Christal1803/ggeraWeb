@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/fonts"
+              "src/assets/fonts/Monday.ttf"
             ],
             "styles": [
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
@@ -36,13 +36,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "900gb",
-                  "maximumError": "1gb"
+                  "maximumWarning": "1000gb",
+                  "maximumError": "2gb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "8gb",
-                  "maximumError": "4gb"
+                  "maximumWarning": "12gb",
+                  "maximumError": "6gb"
                 }
               ],
               "fileReplacements": [

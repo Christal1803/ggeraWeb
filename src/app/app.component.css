@@ -7,3 +7,12 @@
 .main-height{
     background-color: #0D0D18;
 }
+
+
+
+@media(max-width:768px){
+    .main-height{
+           padding-left: 20px;
+           padding-right: 20px;
+       }
+   }

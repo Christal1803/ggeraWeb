@@ -260,8 +260,7 @@
    height: auto;
    background: transparent !important;
    border-radius: 20px;
-   border: #333333 1px solid;
-   flex-direction: column;
+   /* flex-direction: column; */
    display: flex;
  }
  
@@ -272,18 +271,24 @@
    }
  }
  
- .streamLobbyItemVideo {
-   width: 100%;
-   height: 406px;
-   border-radius: 10px 10px 0 0;
-   margin-right: 30px;
-   position: relative;
-   overflow: hidden;
+
+ 
+@media(max-width:768px){
+  .vdo-sm{
+    display: block !important;
+  }
+  .vdo-h1{
+    font-size: 16px;
+  }
+  .vdo-p{
+    font-size: 11px !important;
+  }
  }
  
  .streamLobbyItemVideoCover {
    width: 100%;
    height: 100%;
+  position: relative;
  }
  
  .streamLobbyItemVideoCoverImage {
@@ -308,12 +313,12 @@
  .streamLobbyItemInfoWrapper {
    width: 100%;
    height: auto;
-   min-height: 208px;
-   flex-direction: column;
-   justify-content: space-between;
+   /* min-height: 208px; */
+   /* flex-direction: column;
+   justify-content: space-between; */
    padding: 0 24px;
-   display: flex;
-   position: relative;
+   /* display: flex; */
+   /* position: relative; */
  }
  
  @media (max-width: 850px) {
@@ -1498,12 +1503,14 @@
  
  .streamLobbyItemVideo {
    width: auto;
-   height: 406px;
+   /* height: 406px; */
    border-radius: 10px;
    margin: 20px;
-   position: relative;
-   overflow: hidden;
+   /* position: relative; */
+   /* overflow: hidden; */
  }
+
+
  
  .streamLobbyItemVideo iframe * {
    width: 100% !important;
@@ -2074,9 +2081,7 @@
  }
  
  @media (max-width: 867px) {
-   .streamLobbyItemVideoCover {
-     padding-right: 20%;
-   }
+ 
  
    .streamLobbyItemVideo {
      width: 90%;
@@ -2124,9 +2129,7 @@
    display: block;
  }
  
- h1, h2, h3, h4, h5, h6 {
-    font-family: "Righteous", sans-serif;
-  }
+
   .p{
     font-family: "Manrope", sans-serif;
   }
@@ -2135,11 +2138,16 @@
     -webkit-backdrop-filter: blur(10px);
     background: #22162580;
     max-width: 100%;
-    position: absolute;
-    transform: translate(-27%, 28%);
-    top: -43%;
-    left: 27%;
+    /* position: absolute; */
+    /* transform: translate(-27%, 28%); */
+    /* top: -43%;
+    left: 27%; */
 }
  
  
- 
+ .logo-vdo{
+  z-index: 9999;
+  position: absolute;
+  /* top: 10%; */
+  margin-top: 63px;
+ }

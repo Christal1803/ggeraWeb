@@ -9,10 +9,6 @@
   .blog-header-logo:hover {
     text-decoration: none;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Righteous", sans-serif;
-  }
   .p{
     font-family: "Manrope", sans-serif;
   }
@@ -40,7 +36,8 @@
     margin-bottom: 1.25rem;
     color: #727272;
   }
- 
+ .mb-100{
+  margin-bottom: 140px; }
   img {
     width: 860px;
     mask-image: url('/assets/images/oval.png');
@@ -49,8 +46,34 @@
     mask-size: 960px 600px;
     margin-top: -60px;
   }
-
+.upper{
+  text-transform: uppercase;
+}
  .section-one{
-    width: 547px;
     z-index: 999;
+    position: relative;
+ 
+ }
+ .image-blend{
+  position: absolute;
+  top: 16%;
+  left: 40%;
+}
+
+@media(max-width:768px){
+    img {
+    width: 860px;
+    mask-image: url('/assets/images/oval.png');
+    mask-position: top;
+    mask-repeat: no-repeat;
+    mask-size: 960px 600px;
+    margin-top: -60px;
+    overflow: hidden;
+  }
+  .image-blend{
+    position: absolute;
+    overflow: hidden !important;
+    /* top: 16%;
+    left: 40%; */
+  }
  }

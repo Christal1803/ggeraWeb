@@ -1,9 +1,9 @@
+.owl-theme .owl-nav {
+    position: absolute !important;
+    top: 45% !important;
+    right: -7px !important;
+    border-radius: 50%;
 
- 
- .owl-next {
-    position: absolute;
-    top: 45%;
-    right: -7px;
   }
   .opacity-5{
      opacity: 0.5;
@@ -2040,9 +2040,7 @@
     background-color: #333333;
   }
  
-  h1, h2, h3, h4, h5, h6 {
-     font-family: "Righteous", sans-serif;
-   }
+
    .p{
      font-family: "Manrope", sans-serif;
    }
