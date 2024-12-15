@@ -36,12 +36,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1000gb",
+                  "maximumWarning": "3gb",
                   "maximumError": "2gb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "12gb",
+                  "maximumWarning": "13gb",
                   "maximumError": "6gb"
                 }
               ],
