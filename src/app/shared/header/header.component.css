@@ -1,6 +1,5 @@
-
-  .header-end{
-    justify-content: end;
+.header-end {
+  justify-content: end;
   display: flex;
   align-items: center;
-  }
+}

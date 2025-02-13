@@ -6,7 +6,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./session.component.css']
 })
 export class SessionComponent implements OnInit {
- customOptions: OwlOptions = {
+  customOptions: OwlOptions = {
     loop: false,
     autoplay: true,
     mouseDrag: true,

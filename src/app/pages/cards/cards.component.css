@@ -1,29 +1,34 @@
-.cardimg{
+.cardimg {
         height: 200px;
         background-repeat: no-repeat;
-  width: 100%;
-  border-radius: 20px;
+        width: 100%;
+        border-radius: 20px;
 }
-.card1{
+
+.card1 {
         background-image: url('/assets/svg/card1.svg');
 
 }
-.card2{
+
+.card2 {
         background-image: url('/assets/svg/card2.svg');
 
 }
-.card3{
+
+.card3 {
         background-image: url('/assets/svg/card3.svg');
 
 }
-.card4{
+
+.card4 {
         background-image: url('/assets/svg/card4.svg');
 
 }
-.mt-100{
+
+.mt-100 {
         margin-top: 100px;
 }
 
-      .p{
+.p {
         font-family: "Manrope", sans-serif;
-      }
+}

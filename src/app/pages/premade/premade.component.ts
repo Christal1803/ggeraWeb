@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./premade.component.css']
 })
 export class PremadeComponent implements OnInit {
- 
+
   constructor() { }
 
   ngOnInit(): void {

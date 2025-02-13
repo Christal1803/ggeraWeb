@@ -11,6 +11,7 @@ import { CardCarousalComponent } from './pages/card-carousal/card-carousal.compo
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SessionComponent } from './pages/session/session.component';
 import { PremadeComponent } from './pages/premade/premade.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PremadeComponent } from './pages/premade/premade.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
