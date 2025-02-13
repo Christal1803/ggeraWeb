@@ -12,6 +12,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SessionComponent } from './pages/session/session.component';
 import { PremadeComponent } from './pages/premade/premade.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiAccessService } from './servies/api-access.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TruncatePipe } from './servies/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -22,15 +25,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardsComponent,
     CardCarousalComponent,
     SessionComponent,
-    PremadeComponent
+    PremadeComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiAccessService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

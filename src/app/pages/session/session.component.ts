@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ApiAccessService } from 'src/app/servies/api-access.service';
 @Component({
   selector: 'app-session',
   templateUrl: './session.component.html',
@@ -31,9 +32,28 @@ export class SessionComponent implements OnInit {
     },
     nav: true
   }
-  constructor() { }
+  proUsers: any[] = [];
+
+  constructor(private auth: ApiAccessService) { }
 
   ngOnInit(): void {
+    this.auth.fetchProUsers().subscribe((data) => {
+      this.proUsers = data?.data;
+      const selectedProUsersLocal = this.proUsers.filter(c => c.currentStatus === 'ONLINE');
+
+      if (selectedProUsersLocal.length < 4) {
+        const remainingUsers = 4 - selectedProUsersLocal.length;
+        const otherProUsersLocal = this.proUsers.filter(c => c.currentStatus !== 'ONLINE');
+        const usersToAdd = otherProUsersLocal.slice(0, remainingUsers);
+        this.proUsers = selectedProUsersLocal.concat(usersToAdd);
+      }
+      else if (selectedProUsersLocal.length > 4) {
+        this.proUsers = selectedProUsersLocal.slice(0, 4);
+      } else {
+        this.proUsers = selectedProUsersLocal;
+      }
+
+    });
   }
 
 }
