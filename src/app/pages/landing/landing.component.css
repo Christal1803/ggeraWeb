@@ -60,6 +60,10 @@
   left: 40%;
 }
 
+.banner{
+  /* overflow-x: hidden !important; */
+}
+
 @media(max-width:768px){
     img {
     width: 860px;

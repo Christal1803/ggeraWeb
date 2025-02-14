@@ -32,3 +32,33 @@
 .p {
         font-family: "Manrope", sans-serif;
 }
+.card-text{
+        padding: 0px 0px 0px 20px;
+}
+.card-text1{
+        padding: 0px 20px 0px 0px;
+}
+.upgrade-banner {
+        height: 185px;
+        background-size: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        background: linear-gradient(294.38deg, #41067A 7.72%, #7A06D1 87.02%);
+      }
+      .profile-cover {
+        position: relative;
+        /* right: -152px; */
+        /* top: -13px; */
+      }
+
+      .cover-right{
+        right: -7px;
+      }
+
+
+
+      @media (max-width: 900px) {
+        .card-text {
+                padding: 20px 0px 0px 0px ;
+            }
+      }
