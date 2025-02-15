@@ -8,14 +8,19 @@
   position: absolute;
   top: 45%;
   right: -7px;
+  color: black !important;
 }
 
 .owl-prev {
   position: absolute;
   top: 45%;
   left: -7px;
+  color: black !important;
 }
+::ng-deep .owl-theme .owl-nav [class*=owl-]{
+  color: black !important;
 
+}
 .p {
   font-family: "Manrope", sans-serif;
 }
