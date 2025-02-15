@@ -1,71 +1,81 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
 
-  
-  .bg-body-secondary{
-    background-color: #0D0D18 !important;
+
+.bg-body-secondary {
+  background-color: #0D0D18 !important;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+.p {
+  font-family: "Manrope", sans-serif;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
   }
- 
-  .blog-header-logo:hover {
-    text-decoration: none;
-  }
-  .p{
-    font-family: "Manrope", sans-serif;
-  }
-  .flex-auto {
-    flex: 0 0 auto;
-  }
-  
-  .h-250 { height: 250px; }
-  @media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
-  }
-  
-  /* Pagination */
-  .blog-pagination {
-    margin-bottom: 4rem;
-  }
-  
-  /*
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+/*
    * Blog posts
    */
-  .blog-post {
-    margin-bottom: 4rem;
-  }
-  .blog-post-meta {
-    margin-bottom: 1.25rem;
-    color: #727272;
-  }
- .mb-100{
-  margin-bottom: 140px; }
-  img {
-    width: 860px;
-    mask-image: url('/assets/images/oval.png');
-    mask-position: top;
-    mask-repeat: no-repeat;
-    mask-size: 960px 600px;
-    margin-top: -60px;
-  }
-.upper{
+.blog-post {
+  margin-bottom: 4rem;
+}
+
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+.mb-100 {
+  margin-bottom: 140px;
+}
+
+img {
+  width: 860px;
+  mask-image: url('/assets/images/oval.png');
+  mask-position: top;
+  mask-repeat: no-repeat;
+  mask-size: 960px 600px;
+  margin-top: -60px;
+}
+
+.upper {
   text-transform: uppercase;
 }
- .section-one{
-    z-index: 999;
-    position: relative;
- 
- }
- .image-blend{
+
+.section-one {
+  z-index: 999;
+  position: relative;
+
+}
+
+.image-blend {
   position: absolute;
   top: 16%;
   left: 40%;
 }
 
-.banner{
-  /* overflow-x: hidden !important; */
-}
-
-@media(max-width:768px){
-    img {
+@media(max-width:768px) {
+  img {
     width: 860px;
     mask-image: url('/assets/images/oval.png');
     mask-position: top;
@@ -74,10 +84,11 @@
     margin-top: -60px;
     overflow: hidden;
   }
-  .image-blend{
+
+  .image-blend {
     position: absolute;
     overflow: hidden !important;
     /* top: 16%;
     left: 40%; */
   }
- }
+}

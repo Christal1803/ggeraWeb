@@ -27,7 +27,7 @@ export class SessionComponent implements OnInit {
         items: 3
       },
       940: {
-        items: 5
+        items: 4
       }
     },
     nav: true
@@ -43,7 +43,7 @@ export class SessionComponent implements OnInit {
 
       if (selectedProUsersLocal.length < 4) {
         const remainingUsers = 4 - selectedProUsersLocal.length;
-        const otherProUsersLocal = this.proUsers.filter(c => c.currentStatus !== 'ONLINE');
+        const otherProUsersLocal = this.proUsers.filter(c => c.currentStatus !== 'ONLINE' && c.platform);
         const usersToAdd = otherProUsersLocal.slice(0, remainingUsers);
         this.proUsers = selectedProUsersLocal.concat(usersToAdd);
       }
