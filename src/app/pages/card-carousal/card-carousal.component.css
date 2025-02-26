@@ -2,6 +2,9 @@
   width: 235px !important;
   height: 300px;
   margin: auto;
+  border: 1px solid #5F01D4;
+  border-radius: 5%;
+  object-fit: cover;
 }
 
 .owl-next {
@@ -17,10 +20,12 @@
   left: -7px;
   color: black !important;
 }
-::ng-deep .owl-theme .owl-nav [class*=owl-]{
+
+::ng-deep .owl-theme .owl-nav [class*=owl-] {
   color: black !important;
 
 }
+
 .p {
   font-family: "Manrope", sans-serif;
 }

@@ -59,6 +59,11 @@
         right: -7px;
 }
 
+.card-badge {
+        border: 1px solid #A45DFE;
+        background-color: #A45DFE;
+}
+
 
 
 @media (max-width: 900px) {

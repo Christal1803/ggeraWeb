@@ -6,6 +6,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./card-carousal.component.css']
 })
 export class CardCarousalComponent implements OnInit {
+
   customOptions: OwlOptions = {
     loop: false,
     autoplay: true,
@@ -13,7 +14,6 @@ export class CardCarousalComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: true,
-    navText: ['prev', 'next'],
     navSpeed: 700,
     responsive: {
       0: {
@@ -29,9 +29,11 @@ export class CardCarousalComponent implements OnInit {
         items: 5
       }
     },
-    nav: true
+    nav: false
   }
+
   constructor() { }
+
   ngOnInit(): void {
   }
 

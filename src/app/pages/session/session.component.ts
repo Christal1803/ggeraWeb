@@ -14,7 +14,6 @@ export class SessionComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: true,
-    navText: ['prev', 'next'],
     navSpeed: 700,
     responsive: {
       0: {
@@ -30,7 +29,7 @@ export class SessionComponent implements OnInit {
         items: 4
       }
     },
-    nav: true
+    nav: false
   }
   proUsers: any[] = [];
 
