@@ -9,7 +9,7 @@ export class ApiAccessService {
 
   apiUrl: string = environment.apiUrl;
   baseUrl: string = `${this.apiUrl}/static`;
-  
+
   constructor(private http: HttpClient) { }
 
   fetchProUsers() {
