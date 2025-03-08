@@ -2069,6 +2069,20 @@ element.style {
   border-radius: 50%;
   display: inline-block;
 }
+.dot-red {
+  height: 15px;
+  width: 15px;
+  background-color: #ad3838;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-grey {
+  height: 15px;
+  width: 15px;
+  background-color: #6e6e6e;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 .card.hovercard {
   position: relative;
