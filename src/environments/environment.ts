@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   gamingWebUrl: 'https://qa-gaming.ggera.com/',
-  apiUrl: 'https://qa-api.ggera.com'
+  apiUrl: 'https://qa-api.ggera.com',
+  // gamingWebUrl: 'https://gaming.ggera.com/',
+  // apiUrl: 'https://api.ggera.com'
 };
 
 /*
