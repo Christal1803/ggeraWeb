@@ -1951,6 +1951,7 @@ element.style {
 }
 
 .streamLobbySlotTag {
+  flex: 0 0 45%;
   text-align: center;
   color: #f2f2f2;
   min-height: 25px;

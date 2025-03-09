@@ -45,22 +45,22 @@
                       </defs>
                     </svg>
                   </h3>
-                  <!-- <span class="dot-grey"></span>
-                  <span class="dot-red"></span> -->
-                  <span class="dot"></span>
+                  <span class="dot-grey" *ngIf="contact?.currentStatus !== 'ONLINE'"></span>
+                  <!-- <span class="dot-red"></span> -->
+                  <span class="dot" *ngIf="contact?.currentStatus === 'ONLINE'"></span>
                 </div>
 
 
-                <p class="text-color-light mt-2" style="min-height: 20px;">
+                <p class="text-color-light mt-2" style="min-height: 40px;">
                   {{ contact.summary | truncate: 60 }}
                 </p>
               </div>
-              <div class=" streamLobbySlotTagsWrapper mt-3">
-                <div class="streamLobbySlotTag p-2" style="margin-right: 10px;">
+              <div class="streamLobbySlotTagsWrapper mt-3">
+                <div class="streamLobbySlotTag p-2">
                   <span class="red-letter me-2">Country</span>
                   <span class="fw-bold">{{contact?.region}}</span>
                 </div>
-                <div class="streamLobbySlotTag p-2 ">
+                <div class="streamLobbySlotTag p-2">
                   <span class="red-letter me-2">KD</span>
                   <span class="fw-bold">{{ contact?.kd ? contact?.kd : '0' }}</span>
                 </div>

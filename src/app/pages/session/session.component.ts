@@ -45,9 +45,6 @@ export class SessionComponent implements OnInit {
         const otherProUsersLocal = this.proUsers.filter(c => c.currentStatus !== 'ONLINE' && c.platform);
         const usersToAdd = otherProUsersLocal.slice(0, remainingUsers);
         this.proUsers = selectedProUsersLocal.concat(usersToAdd);
-      }
-      else if (selectedProUsersLocal.length > 4) {
-        this.proUsers = selectedProUsersLocal.slice(0, 4);
       } else {
         this.proUsers = selectedProUsersLocal;
       }

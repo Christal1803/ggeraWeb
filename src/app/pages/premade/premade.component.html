@@ -6,7 +6,7 @@
 </div>
 
 <section class="premade-parties-wrapper container">
-  <div id="premade-parties-list" class="premade-parties-list">
+  <div id="premade-parties-list" class="premade-parties-list" *ngFor="let party of premadeParties">
     <div class="streamLobbyItem">
       <div class="streamLobbyItemVideo">
         <div class="logo-vdo">
@@ -81,7 +81,7 @@
         <div class="d-flex justify-content-between opac-bg">
           <div class="p-4">
             <h1 class="text-light">
-              Gio
+              {{ party?.party?.name }}
               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_5344_406)">
                   <path
@@ -104,19 +104,17 @@
               </svg>
             </h1>
             <p class="text-color-light mb-5">
-              Squad goals: perfect synergy, clutch plays, and unmatched
-              dominance. Together, we don’t just play the game ...
-              <!-- <br /><span class="opacity-5">
-                we own it, reading each other’s moves like a well-rehearsed
-                script and turning every match into a highlight reel.
-              </span> -->
+              {{ party?.party?.serverDescription ?? '' | truncate: 100 }}
+              <br /><span class="opacity-5">
+                {{ party?.party?.description ?? '' | truncate: 100 }}
+              </span>
             </p>
           </div>
         </div>
       </div>
       <div class="row premade-card">
-        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
-          <div class="d-flex justify-content-center fj">
+        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12" *ngFor="let user of party?.slots">
+          <div class="d-flex justify-content-center">
             <div class="streamLobbyItemProSlotWrapper swiper-slide" aria-label="1 / 3"
               style="height: 250px !important; margin-bottom: 20px">
               <img class="card-img-top rounded-circle mobc" style="
@@ -128,11 +126,11 @@
                   background-color: #333333;
                   padding: 5px;
                   object-fit: cover;
-                " src="/assets/images/user.png" alt="avatar" />
-              <div class="container p-3">
+                " src="{{ user.profileImageUrl ? user.profileImageUrl : '/assets/images/nouser.png' }}" alt="avatar" />
+              <div class="container p-3" *ngIf="user.username && user.type == 'PRO'">
                 <div class="d-flex-justify-content-start">
                   <h3 class="text-center text-light">
-                    cikiwawa
+                    {{ user.username | truncate: 8 }}
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_5344_406)">
                         <path
@@ -156,86 +154,28 @@
                   </h3>
 
                   <p class="text-color-light mt-2">
-                    hiii.. any server
+                    {{ user.summary | truncate: 50 }}
                   </p>
                 </div>
                 <div class="streamLobbySlotTagsWrapper mt-3">
-                  <div class="streamLobbySlotTag p-2">
+                  <div class="streamLobbySlotTag p-2" style="flex: 0 0 45%;">
                     <span class="red-letter me-2">Country</span>
-                    <span class="fw-bold">Europe</span>
+                    <span class="fw-bold">{{ user?.region }}</span>
                   </div>
-                  <div class="streamLobbySlotTag p-2">
+                  <div class="streamLobbySlotTag p-2" style="flex: 0 0 45%;">
                     <span class="red-letter me-2">KD</span>
-                    <span class="fw-bold">0</span>
+                    <span class="fw-bold">{{ user.kd }}</span>
                   </div>
-                  <div class="streamLobbySlotTag p-2">
+                  <div class="streamLobbySlotTag p-2" style="flex: 0 0 45%;">
                     <span class="red-letter me-2">Platform</span>
-                    <span class="fw-bold">PC</span>
+                    <span class="fw-bold">{{ user.platform }}</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-md-6  col-xs-12">
-          <div class="d-flex justify-content-center fj">
-            <div class="streamLobbyItemProSlotWrapper swiper-slide" aria-label="1 / 3"
-              style="height: 250px !important; margin-bottom: 20px">
-              <img class="card-img-top rounded-circle mobc" style="
-                  position: absolute;
-                  top: -27px;
-                  left: 120px;
-                  width: 52px;
-                  height: 52px;
-                  background-color: #333333;
-                  padding: 5px;
-                  object-fit: cover;
-                " src="/assets/images/nouser.png
-                        " alt="avatar" />
-              <div class="streamLobbySlotTag m-auto p-2">
-                <span class="red-letter">Free Slot</span>
+              <div class="streamLobbySlotTag m-auto p-2" *ngIf="user.username && user.type === 'CLIENT'">
+                <span class="red-letter">Occupied</span>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-md-6  col-xs-12">
-          <div class="d-flex justify-content-center fj">
-            <div class="streamLobbyItemProSlotWrapper swiper-slide" aria-label="1 / 3"
-              style="height: 250px !important; margin-bottom: 20px">
-              <img class="card-img-top rounded-circle mobc" style="
-                  position: absolute;
-                  top: -27px;
-                  left: 120px;
-                  width: 52px;
-                  height: 52px;
-                  background-color: #333333;
-                  padding: 5px;
-                  object-fit: cover;
-                " src="/assets/images/nouser.png
-                        " alt="avatar" />
-              <div class="streamLobbySlotTag m-auto p-2">
-                <span class="red-letter">Free Slot</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <div class="d-flex justify-content-center fj">
-            <div class="streamLobbyItemProSlotWrapper swiper-slide" aria-label="1 / 3"
-              style="height: 250px !important; margin-bottom: 20px">
-              <img class="card-img-top rounded-circle mobc" style="
-                  position: absolute;
-                  top: -27px;
-                  left: 120px;
-                  width: 52px;
-                  height: 52px;
-                  background-color: #333333;
-                  padding: 5px;
-                  object-fit: cover;
-                " src="/assets/images/nouser.png
-                        " alt="avatar" />
-              <div class="streamLobbySlotTag m-auto p-2">
+              <div class="streamLobbySlotTag m-auto p-2" *ngIf="!user.username">
                 <span class="red-letter">Free Slot</span>
               </div>
             </div>
@@ -246,7 +186,7 @@
   </div>
 </section>
 
-<div class="session-text my-auto mb-4 pb-4">
+<div class="session-text my-auto mb-4 pb-4" *ngIf="premadeParties && premadeParties.length > 0">
   <button type="button" class="btn btn-primary-gg p-3" (click)="redirectToPremade()">
     <h5 class="pe-4 px-4">Join the party <span class="h1-font">$12/1</span> hour</h5>
   </button>
