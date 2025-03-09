@@ -61,10 +61,14 @@
           </div>
         </div>
         <div class="streamLobbyItemVideoCover">
-          <div class="video-container" style="width: 100%">
-            <iframe height="400" width="100%" src="https://www.youtube.com/embed/UckUO29p2Is?si=hdce_73gtewjroCX"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          <div class="video-container" style="width: 100%" *ngIf="party?.embedUrl">
+            <iframe height="400" width="100%" [src]="party.embedUrl" title="YouTube video player" frameborder="0"
+              referrerpolicy="strict-origin-when-cross-origin" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="video-container" style="width: 100%" *ngIf="!party.embedUrl">
+            <iframe height="400" width="100%" [src]="fallbackVideoUrl" title="YouTube video player" frameborder="0"
               referrerpolicy="strict-origin-when-cross-origin" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
