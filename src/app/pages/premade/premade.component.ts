@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiAccessService } from 'src/app/servies/api-access.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-premade',
   templateUrl: './premade.component.html',
@@ -36,7 +37,7 @@ export class PremadeComponent implements OnInit {
   }
 
   redirectToPremade(): void {
-    window.location.href = 'https://qa-gaming.ggera.com/client/premade-available';
+    window.location.href = `${environment.gamingWebUrl}client/premade-available`;
   }
 
 }
