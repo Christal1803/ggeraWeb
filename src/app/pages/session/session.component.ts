@@ -8,8 +8,8 @@ import { ApiAccessService } from 'src/app/servies/api-access.service';
 })
 export class SessionComponent implements OnInit {
   customOptions: OwlOptions = {
-    loop: false,
-    autoplay: true,
+    loop: true,
+    autoplay: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,

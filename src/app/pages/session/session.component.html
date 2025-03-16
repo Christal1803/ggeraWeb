@@ -56,6 +56,15 @@
                 </p>
               </div>
               <div class="streamLobbySlotTagsWrapper mt-3">
+                <div class="streamLobbySlotTag p-2" *ngFor="let game of contact?.chosenGames">
+                  <span class="red-letter me-2">Game</span>
+                  <span class="fw-bold">{{game}}</span>
+                </div>
+                <div class="streamLobbySlotTag p-2" *ngIf="!contact.chosenGames?.length" style="flex: 0 0 100% !important;">
+                  <span class="fw-bold">No Games Added</span>
+                </div>
+              </div>
+              <div class="streamLobbySlotTagsWrapper mt-2">
                 <div class="streamLobbySlotTag p-2">
                   <span class="red-letter me-2">Country</span>
                   <span class="fw-bold">{{contact?.region}}</span>
