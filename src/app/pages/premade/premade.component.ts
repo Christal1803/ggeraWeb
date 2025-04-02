@@ -20,9 +20,6 @@ export class PremadeComponent implements OnInit {
     this.fallbackVideoUrl = this.transformVideoUrl('https://www.youtube.com/embed/V08UPqchVgQ');
     this.auth.fetchPremadeParties().subscribe((data) => {
       this.premadeParties = data?.data;
-      if (this.premadeParties.length > 1) {
-        this.premadeParties = this.premadeParties.slice(0, 1);
-      }
       this.premadeParties.map((party) => party.embedUrl = this.transformVideoUrl(party.party?.videoUrl));
 
     });
