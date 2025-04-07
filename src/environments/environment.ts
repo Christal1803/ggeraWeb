@@ -8,6 +8,7 @@ export const environment = {
   apiUrl: 'https://qa-api.ggera.com',
   // gamingWebUrl: 'https://gaming.ggera.com/',
   // apiUrl: 'https://api.ggera.com'
+  // apiUrl: 'http://localhost:3001'
 };
 
 /*
