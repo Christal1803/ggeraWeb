@@ -34,11 +34,11 @@
 }
 
 .card-text {
-        padding: 0px 0px 0px 20px;
+        padding: 0px 20px 0px 20px;
 }
 
 .card-text1 {
-        padding: 0px 20px 0px 0px;
+        padding: 0px 20px 0px 20px;
 }
 
 .upgrade-banner {
@@ -51,12 +51,10 @@
 
 .profile-cover {
         position: relative;
+        height: 100%;
+        object-fit: cover;
         /* right: -152px; */
         /* top: -13px; */
-}
-
-.cover-right {
-        right: -7px;
 }
 
 .card-badge {
