@@ -61,11 +61,3 @@
         border: 1px solid #A45DFE;
         background-color: #A45DFE;
 }
-
-
-
-@media (max-width: 900px) {
-        .card-text {
-                padding: 20px 0px 0px 0px;
-        }
-}
